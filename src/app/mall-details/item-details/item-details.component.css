@@ -1,0 +1,23 @@
+.mall-pseudo-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.mall-header{
+  background-color: darkslategrey;
+}
+.mall-nav{
+  display: flex;
+  flex-direction: row;
+  color: white;
+}
+.mall-nav a{
+  color: white;
+}
+.container{
+  width: 80%;
+  margin: 0 auto;
+}
+.mall-nav a:focus, .mall-nav a:hover {
+  color: #dae0e5
+}

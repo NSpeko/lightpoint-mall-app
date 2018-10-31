@@ -17,6 +17,7 @@ export class ItemDetailsComponent implements OnInit {
   lat: FormControl;
   lng: FormControl;
   description: FormControl;
+  activeRouteSnapshot: number;
 
   constructor(
     private route: ActivatedRoute,
@@ -30,6 +31,7 @@ export class ItemDetailsComponent implements OnInit {
   }
 
   getItem(): void {
+    this.activeRouteSnapshot = +this.route.snapshot.paramMap.get('id');
     const id: number = +this.route.snapshot.paramMap.get('id');
     this.itemsService.getItemByID(id)
       .subscribe(item => this.item = item);

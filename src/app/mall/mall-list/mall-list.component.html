@@ -1,10 +1,11 @@
 <main class="container">
   <section class="mall-container">
-    <p>
-      mall-list works!
-    </p>
-    <a *ngFor="let item  of mallList" routerLink="/mall/details/{{item.id}}">
-      {{item.name}}
+    <article class="list-heading">
+      <h2>
+        The list of greatest malls!
+      </h2>
+    </article>
+    <a class="mall-item" *ngFor="let item  of mallList" routerLink="/mall/details/{{item.id}}">
       <app-mall-item [item]="item"></app-mall-item>
     </a>
   </section>

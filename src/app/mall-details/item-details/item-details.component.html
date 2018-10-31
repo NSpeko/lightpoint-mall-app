@@ -1,26 +1,39 @@
-<p>
-  item-details works!{{item.name}}
-</p>
-<label>
-  Name:
-  <input type="text" [formControl]="name">
-</label>
-<label>
-  Address:
-  <input type="text" [formControl]="address">
-</label>
-<label>
-  lat:
-  <input type="number" [formControl]="lat">
-</label>
-<label>
-  lng:
-  <input type="number" [formControl]="lng">
-</label>
-<label>
-  Description:
-  <textarea [formControl]="description"></textarea>
-</label>
-<button (click)="setItemChanges()">
-  Save Changes
-</button>
+<header class="mall-header">
+  <nav class="mall-nav container">
+    <a routerLink="/malls"><h3>Malls</h3></a>
+    <a routerLink="/mall/details/{{activeRouteSnapshot}}"><h3>{{name.value}}</h3></a>
+  </nav>
+</header>
+<main class="container">
+  <section class="mall-pseudo-form">
+    <label>
+      Name:
+      <input type="text" [formControl]="name">
+    </label>
+    <label>
+      Address:
+      <input type="text" [formControl]="address">
+    </label>
+    <label>
+      lat:
+      <input type="number" [formControl]="lat">
+    </label>
+    <label>
+      lng:
+      <input type="number" [formControl]="lng">
+    </label>
+    <label>
+      Description:
+      <textarea [formControl]="description"></textarea>
+    </label>
+    <button (click)="setItemChanges()">
+      Save Changes
+    </button>
+  </section>
+  <section>
+    <h2>
+      Mall {{name.value}}
+    </h2>
+    <p>{{description.value}}</p>
+  </section>
+</main>

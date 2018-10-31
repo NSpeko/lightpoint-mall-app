@@ -4,9 +4,32 @@
 }
 .mall-container{
   width: 30%;
+  height: 100vh;
+  overflow-y: scroll;
 }
 .mall-map{
   height: 100vh;
   width: 70%;
+}
+.list-heading{
+  display: flex;
+  margin: 0 auto;
+  padding: 1.5rem 0;
+  background-color: darkslategrey;
+  color: white;
+}
+.list-heading h2{
+  margin: 0 auto;
+}
+.mall-item{
+  padding: .5rem;
+  display: flex;
+  text-decoration: none;
+}
+.mall-item:hover{
+  background-color: lightgray;
+}
+.mall-item:focus{
+  border: cornflowerblue .2rem solid;
 }
 
