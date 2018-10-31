@@ -19,8 +19,8 @@
 </label>
 <label>
   Description:
-  <input type="text" [formControl]="description">
+  <textarea [formControl]="description"></textarea>
 </label>
-<button >
+<button (click)="setItemChanges()">
   Save Changes
 </button>

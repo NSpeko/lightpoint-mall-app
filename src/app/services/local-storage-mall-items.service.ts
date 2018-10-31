@@ -21,7 +21,14 @@ export class LocalStorageMallItemsService {
 
   getItemByID(tempID: number): Observable<MallEntity> {
     console.log(this.mallList.find((item) => item.id === tempID), this.mallList);
+    this.setItemsToLocalStorage(this.mallList);
     return of(this.mallList.find((item) => item.id === tempID));
+  }
+
+  setItemChanges(item: MallEntity): void {
+    const tempIndex = this.mallList.findIndex(el => item.id === el.id);
+    this.mallList[tempIndex] = item;
+    this.setItemsToLocalStorage(this.mallList);
   }
 
   setItemsToLocalStorage(mallList: MallEntity[]): void {
