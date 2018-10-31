@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+  margin: 0 auto;
+  font-family: Verdana, sans-serif;
+}
+.own-hidden{
+  visibility: hidden;
+  width: 0;
+  position: absolute;
+  top: -30vh;
+}
